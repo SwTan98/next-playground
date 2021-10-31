@@ -14,7 +14,11 @@ import {
   Toolbar,
   Typography,
 } from "@mui/material";
-import { Home, Menu, Inbox, Mail } from "@mui/icons-material";
+import {
+  Home as HomeIcon,
+  Menu as MenuIcon,
+  Image as ImageIcon,
+} from "@mui/icons-material";
 import { useTheme } from "@mui/material/styles";
 import { ColorModeContext } from "../contexts/ThemeContext";
 import MaterialUISwitch from "./MaterialUiSwitch";
@@ -30,7 +34,7 @@ const MenuList = ({ onClose }: { onClose: Function }) => (
       <Link passHref href="/">
         <ListItem button>
           <ListItemIcon>
-            <Home />
+            <HomeIcon />
           </ListItemIcon>
           <ListItemText primary="Home" />
         </ListItem>
@@ -38,12 +42,14 @@ const MenuList = ({ onClose }: { onClose: Function }) => (
     </List>
     <Divider />
     <List>
-      {["Animation", "Button", "Validation"].map((text, index) => (
-        <ListItem button key={text}>
-          <ListItemIcon>{index % 2 === 0 ? <Inbox /> : <Mail />}</ListItemIcon>
-          <ListItemText primary={text} />
+      <Link passHref href="/gallery">
+        <ListItem button>
+          <ListItemIcon>
+            <ImageIcon />
+          </ListItemIcon>
+          <ListItemText primary="Gallery" />
         </ListItem>
-      ))}
+      </Link>
     </List>
   </Box>
 );
@@ -67,7 +73,7 @@ const CustomAppBar = () => {
             sx={{ mr: 2 }}
             onClick={toggleDrawer}
           >
-            <Menu />
+            <MenuIcon />
           </IconButton>
           <Typography variant="h6" component="span" sx={{ flexGrow: 1 }}>
             Next.js Playground
