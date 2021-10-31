@@ -1,17 +1,18 @@
 import type { AppProps } from "next/app";
-import { Box } from "@mui/material";
+import { Box, CssBaseline } from "@mui/material";
 import { ColorModeProvider } from "../lib/contexts/ThemeContext";
 import AppBar from "../lib/components/AppBar";
 import "../styles/globals.css";
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
-  <Box sx={{ flexGrow: 1 }}>
-    <ColorModeProvider>
-      <>
+  <ColorModeProvider>
+    <>
+      <CssBaseline />
+      <Box sx={{ flexGrow: 1 }}>
         <AppBar />
         <Component {...pageProps} />
-      </>
-    </ColorModeProvider>
-  </Box>
+      </Box>
+    </>
+  </ColorModeProvider>
 );
 export default MyApp;
