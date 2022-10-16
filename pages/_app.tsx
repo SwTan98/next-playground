@@ -1,4 +1,4 @@
-import type { AppProps } from "next/app";
+import { AppProps } from 'next/app';
 import { Box, CssBaseline } from "@mui/material";
 import { ColorModeProvider } from "../lib/contexts/ThemeContext";
 import AppBar from "../lib/components/AppBar";
