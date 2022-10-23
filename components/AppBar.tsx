@@ -20,7 +20,7 @@ import {
   Image as ImageIcon,
 } from "@mui/icons-material";
 import { useTheme } from "@mui/material/styles";
-import { ColorModeContext } from "../contexts/ThemeContext";
+import { ColorModeContext } from "../lib/contexts/ThemeContext";
 import MaterialUISwitch from "./MaterialUiSwitch";
 
 const MenuList = ({ onClose }: { onClose: Function }) => (

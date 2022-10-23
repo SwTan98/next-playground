@@ -1,7 +1,7 @@
-import { AppProps } from 'next/app';
+import { AppProps } from "next/app";
 import { Box, CssBaseline } from "@mui/material";
 import { ColorModeProvider } from "../lib/contexts/ThemeContext";
-import AppBar from "../lib/components/AppBar";
+import AppBar from "../components/AppBar";
 import "../styles/globals.css";
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
